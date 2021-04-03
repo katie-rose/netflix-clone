@@ -16,7 +16,7 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName='TabOne'
+      initialRouteName='Home'
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
@@ -24,16 +24,34 @@ export default function BottomTabNavigator() {
         component={TabOneNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name='ios-code' color={color} />
+            <AntDesign name='home' size={24} color={color} />
           ),
         }}
       />
       <BottomTab.Screen
-        name='TabTwo'
+        name='Coming Soon'
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name='ios-code' color={color} />
+            <MaterialIcons name='video-library' size={24} color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name='Search'
+        component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Ionicons name='search' size={24} color={color} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name='Downloads'
+        component={TabTwoNavigator}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <AntDesign name='download' size={24} color={color} />
           ),
         }}
       />
